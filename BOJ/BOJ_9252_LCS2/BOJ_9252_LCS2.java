@@ -44,12 +44,11 @@ public class BOJ_9252_LCS2 {
 
         }
 
-        int i = str.length() - 1;
-        int j = str2.length() - 1;
-
         int len = dp[str.length() - 1][str2.length() - 1];
         System.out.println(len);
         if (len > 0) {
+            int i = str.length() - 1;
+            int j = str2.length() - 1;
             StringBuilder result = new StringBuilder();
             while (true) {
                 if (str.charAt(i) == str2.charAt(j)) {
